@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#11131b">
+  <title>Fitoxy AI — Your wellness companion</title>
+  <meta name="description" content="Fitoxy AI wellness dashboard with food scanning, Fit Go and progress tracking.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="Fitoxy AI home">
+        <span class="brand-mark">f<span>+</span></span>
+        <span class="brand-name">fitoxy<span>AI</span></span>
+      </a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav">
+        <button class="nav-item active" data-page="overview">◫ Overview</button>
+        <button class="nav-item" data-page="scanner">⌗ Food scanner <b class="new-tag">AI</b></button>
+        <button class="nav-item" data-page="fitgo">↗ Fit Go</button>
+        <button class="nav-item" data-page="progress">⌁ Progress</button>
+        <button class="nav-item" data-page="coach">✧ AI Coach</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="upgrade-card">
+          <div class="upgrade-icon">✦</div>
+          <strong>Your next level</strong>
+          <p>Build healthy habits, one day at a time.</p>
+          <button class="small-button" data-page-link="fitgo">Explore Fit Go →</button>
+        </div>
+        <div class="profile-row">
+          <div class="avatar">F</div>
+          <div><strong>Fitoxy Member</strong><small>Starter workspace</small></div>
+          <span class="dots">•••</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div class="crumb">Workspace / <strong id="pageCrumb">Overview</strong></div>
+        <div class="top-actions">
+          <span class="prototype-pill"><i></i> Prototype mode</span>
+          <button class="icon-button" id="themeToggle" aria-label="Toggle appearance">◐</button>
+          <button class="user-button"><span class="avatar small">F</span><span>My space</span><span>⌄</span></button>
+        </div>
+      </header>
+
+      <section class="page active" id="page-overview">
+        <div class="welcome-row">
+          <div>
+            <div class="eyebrow">✦ YOUR PERSONAL WELLNESS SPACE</div>
+            <h1>Make progress feel <em>possible.</em></h1>
+            <p class="subheading">A little consistency today can make tomorrow easier.</p>
+          </div>
+          <div class="date-chip">◷ <span id="todayDate">Today</span></div>
+        </div>
+
+        <div class="hero-banner">
+          <div class="hero-content">
+            <span class="hero-kicker">YOUR DAY, YOUR PACE</span>
+            <h2>Small steps.<br><span>Real momentum.</span></h2>
+            <p>Check in with your habits, explore Fit Go, and keep learning what works for you.</p>
+            <button class="primary-button" data-page-link="fitgo">Explore today's movement →</button>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="orb orb-big">✦</div>
+            <div class="orb orb-small"></div>
+            <div class="art-label label-top">MOVE WITH INTENTION</div>
+            <div class="art-label label-bottom">01 — KEEP GOING</div>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div><h2>Your overview</h2><p>A friendly snapshot, not a scorecard.</p></div>
+          <span class="muted-label">DEMO DATA</span>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-top"><span class="stat-icon violet">⌁</span><span class="stat-caption">ACTIVITY</span></div>
+            <div class="stat-number">24 <small>min</small></div>
+            <div class="stat-foot"><span class="positive">↗ A little movement</span><span class="muted">today</span></div>
+            <div class="mini-bars"><i style="height:28%"></i><i style="height:45%"></i><i style="height:36%"></i><i style="height:67%"></i><i style="height:49%"></i><i style="height:78%"></i><i class="bar-highlight" style="height:58%"></i></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span class="stat-icon mint">♡</span><span class="stat-caption">WELLNESS CHECK-IN</span></div>
+            <div class="stat-number">3 <small>habits</small></div>
+            <div class="stat-foot"><span class="positive">Keep it gentle</span><span class="muted">today</span></div>
+            <div class="habit-line"><span>Water</span><span class="habit-track"><i style="width:65%"></i></span></div>
+            <div class="habit-line"><span>Stretch</span><span class="habit-track"><i style="width:40%"></i></span></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span class="stat-icon peach">✧</span><span class="stat-caption">LEARNING</span></div>
+            <div class="stat-number">1 <small>new insight</small></div>
+            <div class="stat-foot"><span class="positive">Curiosity counts</span><span class="muted">this week</span></div>
+            <div class="insight-box">Try noticing how different meals leave you feeling.</div>
+          </article>
+        </div>
+
+        <div class="lower-grid">
+          <article class="panel">
+            <div class="panel-heading">
+              <div><h3>Your weekly rhythm</h3><p>Illustrative activity minutes</p></div>
+              <button class="text-button" data-page-link="progress">View progress →</button>
+            </div>
+            <div class="chart-wrap">
+              <div class="y-labels"><span>60</span><span>40</span><span>20</span><span>0</span></div>
+              <div class="chart" role="img" aria-label="Illustrative weekly activity chart">
+                <div class="grid-lines"><i></i><i></i><i></i><i></i></div>
+                <svg viewBox="0 0 600 160" preserveAspectRatio="none">
+                  <defs><linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a78bfa" stop-opacity=".32"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></linearGradient></defs>
+                  <path d="M0,118 C35,112 50,70 95,84 S155,120 195,72 S260,94 300,54 S365,84 400,64 S460,100 500,42 S560,64 600,24 L600,160 L0,160 Z" fill="url(#fill)"/>
+                  <path d="M0,118 C35,112 50,70 95,84 S155,120 195,72 S260,94 300,54 S365,84 400,64 S460,100 500,42 S560,64 600,24" fill="none" stroke="#a78bfa" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <div class="x-labels"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="panel focus-panel">
+            <div class="panel-heading"><div><h3>Try something today</h3><p>Pick what feels right for you.</p></div><span class="spark">✦</span></div>
+            <div class="quick-action" data-page-link="scanner"><div class="quick-icon peach">⌗</div><div><strong>Explore food scanner</strong><small>Learn about a meal</small></div><span>→</span></div>
+            <div class="quick-action" data-page-link="fitgo"><div class="quick-icon mint">↗</div><div><strong>Open Fit Go</strong><small>Gentle movement ideas</small></div><span>→</span></div>
+            <div class="quick-action" data-page-link="coach"><div class="quick-icon violet">✧</div><div><strong>Ask your AI Coach</strong><small>Get a helpful explanation</small></div><span>→</span></div>
+          </article>
+        </div>
+        <p class="disclaimer">Fitoxy AI prototype • Demo numbers are illustrative, not real measurements or medical advice.</p>
+      </section>
+
+      <section class="page" id="page-scanner">
+        <div class="page-title"><div class="eyebrow">FOOD EXPLORER</div><h1>Discover what's <em>on your plate.</em></h1><p class="subheading">Add a food photo to preview the scanner experience.</p></div>
+        <div class="scanner-layout">
+          <div class="panel upload-panel">
+            <div class="upload-zone" id="uploadZone">
+              <div class="upload-symbol">⌗</div><h3>Drop a food photo here</h3><p>Or choose an image from your device</p>
+              <label class="primary-button file-button">Choose photo<input id="foodFile" type="file" accept="image/*" hidden></label>
+              <img id="foodPreview" alt="Selected food preview" hidden>
+            </div>
+            <button class="primary-button full-button" id="scanButton">Preview demo analysis →</button>
+            <p class="tiny-note">This starter demo does not run real AI analysis yet.</p>
+          </div>
+          <div class="panel results-panel">
+            <span class="result-label">SAMPLE RESULT</span><h2 id="resultTitle">Your meal insights</h2>
+            <p id="resultDescription">Upload a photo to preview food insights. Values below are examples only.</p>
+            <div class="nutrition-grid">
+              <div><small>Energy estimate</small><strong>~420 <i>kcal</i></strong></div>
+              <div><small>Protein</small><strong>18 <i>g</i></strong></div>
+              <div><small>Carbohydrates</small><strong>52 <i>g</i></strong></div>
+              <div><small>Fat</small><strong>14 <i>g</i></strong></div>
+            </div>
+            <div class="tip-box"><span>✦</span><div><strong>A gentle idea</strong><p>Pair different food groups when available, and notice how your meal leaves you feeling.</p></div></div>
+            <p class="tiny-note">Photo-based nutrition estimates can be inaccurate.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="page-fitgo">
+        <div class="page-title"><div class="eyebrow">FIT GO • MOVE YOUR WAY</div><h1>Movement that meets <em>you where you are.</em></h1><p class="subheading">Choose a comfortable activity. Rest is part of progress too.</p></div>
+        <div class="fitgo-banner">
+          <div><span class="hero-kicker">TODAY'S STARTER SESSION</span><h2>Reset &amp; recharge</h2><p>A gentle 6-minute movement break. Stop if you feel pain, dizziness, or unusual breathlessness.</p><button class="primary-button" id="startRoutine">Start session →</button></div>
+          <div class="session-circle"><span>06</span><small>MINUTES</small><i>✦</i></div>
+        </div>
+        <div class="section-heading"><div><h2>Movement library</h2><p>Illustrative routines to explore.</p></div></div>
+        <div class="routine-grid">
+          <article class="routine-card"><div class="routine-visual lavender">↗</div><span class="tag">GENTLE</span><h3>Warm-up basics</h3><p>Easy shoulder rolls, ankle circles and comfortable marching.</p><div class="routine-foot"><span>5–6 min</span><button data-routine="Warm-up basics">View steps →</button></div></article>
+          <article class="routine-card"><div class="routine-visual green">⌁</div><span class="tag">RECOVERY</span><h3>Stretch break</h3><p>Relaxed stretches with no forcing or bouncing.</p><div class="routine-foot"><span>4 min</span><button data-routine="Stretch break">View steps →</button></div></article>
+          <article class="routine-card"><div class="routine-visual peach">◷</div><span class="tag">EVERYDAY</span><h3>Walking break</h3><p>Try an easy-paced walk if it feels comfortable and safe.</p><div class="routine-foot"><span>10 min</span><button data-routine="Walking break">View steps →</button></div></article>
+        </div>
+        <div class="panel routine-detail" id="routineDetail" hidden><h3 id="routineTitle">Routine steps</h3><ol id="routineSteps"></ol><button class="secondary-button" id="closeRoutine">Close</button></div>
+      </section>
+
+      <section class="page" id="page-progress">
+        <div class="page-title"><div class="eyebrow">YOUR JOURNEY</div><h1>Progress without <em>pressure.</em></h1><p class="subheading">Use patterns to learn, not to judge yourself.</p></div>
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon violet">⌁</span><span class="stat-caption">ACTIVE TIME</span></div><div class="stat-number">112 <small>min</small></div><div class="stat-foot"><span class="muted">Sample weekly total</span></div></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon mint">♡</span><span class="stat-caption">CHECK-INS</span></div><div class="stat-number">4 <small>days</small></div><div class="stat-foot"><span class="muted">Sample data</span></div></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon peach">✧</span><span class="stat-caption">CONSISTENCY</span></div><div class="stat-number">Your <small>own pace</small></div><div class="stat-foot"><span class="muted">No perfect streak required</span></div></article>
+        </div>
+        <div class="panel progress-panel">
+          <h3>Weekly activity overview</h3><p>Illustrative minutes only. Real tracking will be connected later.</p>
+          <div class="progress-bars">
+            <div><span>Mon</span><i><b style="width:42%"></b></i><small>18 min</small></div>
+            <div><span>Tue</span><i><b style="width:68%"></b></i><small>29 min</small></div>
+            <div><span>Wed</span><i><b style="width:30%"></b></i><small>13 min</small></div>
+            <div><span>Thu</span><i><b style="width:85%"></b></i><small>36 min</small></div>
+            <div><span>Fri</span><i><b style="width:38%"></b></i><small>16 min</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="page-coach">
+        <div class="page-title"><div class="eyebrow">FITOXY AI • COACH</div><h1>A little clarity goes <em>a long way.</em></h1><p class="subheading">This is a UI demo; replies are sample text, not live AI.</p></div>
+        <div class="panel chat-panel">
+          <div class="chat-head"><div class="coach-avatar">✧</div><div><strong>Fitoxy Coach</strong><small><span class="online-dot"></span> Demo mode</small></div><span class="chat-badge">WELLNESS GUIDE</span></div>
+          <div class="chat-messages" id="chatMessages"><div class="message bot-message">Hi! I can help you explore balanced habits, movement ideas and how the app works. What would you like to learn about?</div></div>
+          <div class="suggestions"><button>Suggest a gentle warm-up</button><button>Explain food estimates</button><button>Build a balanced routine</button></div>
+          <form id="chatForm" class="chat-input"><input id="chatInput" placeholder="Ask a wellness question..." autocomplete="off" aria-label="Ask a wellness question"><button type="submit" aria-label="Send message">↑</button></form>
+          <p class="tiny-note">Demo replies are prewritten. Live AI is not connected yet.</p>
+        </div>
+      </section>
+
+      <footer class="app-footer"><span>✦ fitoxyAI</span><span>Built for steady, thoughtful progress.</span><button id="brightnessToggle">Appearance: <span id="appearanceName">Premium dark</span> ↗</button></footer>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>
