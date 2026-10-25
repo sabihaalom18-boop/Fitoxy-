@@ -1,0 +1,4 @@
+Fitoxy AI Starter Prototype
+Copyright (c) 2026.
+
+This starter code is provided to the recipient for evaluation and modification. Third-party fonts are loaded from Google Fonts and remain subject to their respective terms. This file does not grant rights to third-party services, APIs, names, logos, or trademarks.
